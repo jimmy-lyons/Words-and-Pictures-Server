@@ -3,8 +3,10 @@ from django.db import models
 
 class Project(models.Model):
   name = models.CharField(max_length=200)
+  heading = models.CharField(max_length=200, default="")
+  client = models.CharField(max_length=200, default="")
   description = models.TextField(default="")
 
   def __str__(self):
-    return self.name
+    return self.name + " / " + self.heading
     
