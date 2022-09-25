@@ -22,5 +22,6 @@ from server import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('projects/', views.project_list)
+    path('projects/', views.project_list),
+    path('projectImages/', views.project_images)
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

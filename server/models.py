@@ -9,7 +9,7 @@ class Project(models.Model):
   description = models.TextField(default="")
 
   def __str__(self):
-    return self._id + ": " + self.name + " / " + self.heading
+    return self.name + " / " + self.heading
 
 
 class ProjectImage(models.Model):
@@ -18,4 +18,4 @@ class ProjectImage(models.Model):
   image = models.ImageField(upload_to='images')
 
   def __str__(self):
-    return self.name + ", " + self.project
+    return self.name
